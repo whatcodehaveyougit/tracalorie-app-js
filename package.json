@@ -26,6 +26,10 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "axios": "^0.26.1"
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@popperjs/core": "^2.11.8",
+    "axios": "^0.26.1",
+    "bootstrap": "^5.3.3",
+    "popper.js": "^1.16.1"
   }
 }

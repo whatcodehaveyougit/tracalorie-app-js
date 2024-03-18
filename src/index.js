@@ -48,7 +48,8 @@ class App {
     const text = e.target.value.toLowerCase();
     const items = document.querySelectorAll(`#${type}-items .card`);
     items.forEach(item => {
-      const itemName = item.querySelector('h4').textContent.toLowerCase();
+      console.log(item.querySelector('h4'))
+      const itemName = item.querySelector('h4').innerHTML.toLowerCase();
       if(itemName.indexOf(text) !== -1){
         item.style.display = 'block';
       } else {

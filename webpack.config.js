@@ -55,8 +55,11 @@ module.exports = {
       template: 'src/index.html',
     }),
     new MiniCssExtractPlugin(),
+    // new BundleAnalyzerPlugin({
+    //   analyzerMode: 'static'
+    // }),
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static'
-    })
+      analyzerMode: 'disabled',
+    }),
   ],
 }

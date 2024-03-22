@@ -4,7 +4,6 @@ class Storage {
 
   // These methods are static as we do not need to instantiate the class many times
   static getCalorieLimit(defaultLimit = 2010){
-    console.log('calling thi s')
     let calorieLimit;
     if(localStorage.getItem('calorieLimit') === null){
       calorieLimit = defaultLimit;
@@ -73,7 +72,6 @@ class Storage {
   }
 
   static clearAll(){
-    console.log('calling clear all')
     localStorage.clear();
   }
 

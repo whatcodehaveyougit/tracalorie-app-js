@@ -38,7 +38,6 @@ class CalorieTracker {
     Storage.setMeals(meals);
   }
 
-
   addMeal(meal){
     this._meals.push(meal)
     const res = this._totalCalories + meal.calories
@@ -101,7 +100,6 @@ class CalorieTracker {
 
   _displayCaloriesBurned(){
     const caloriesBurned = document.querySelector('#calories-burned');
-    console.log(this._workouts)
     const burned = this._workouts.reduce((acc, workout) => acc + workout.calories, 0);
     caloriesBurned.textContent = burned;
   }
@@ -123,6 +121,8 @@ class CalorieTracker {
     progress.style.width = `${percentage}%`;
     if(percentage > 100){
       progress.classList.add('bg-danger');
+    } else {
+      progress.classList.remove('bg-danger');
     }
   }
 

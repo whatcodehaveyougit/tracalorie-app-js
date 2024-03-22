@@ -48,7 +48,6 @@ class App {
     const text = e.target.value.toLowerCase();
     const items = document.querySelectorAll(`#${type}-items .card`);
     items.forEach(item => {
-      console.log(item.querySelector('h4'))
       const itemName = item.querySelector('h4').innerHTML.toLowerCase();
       if(itemName.indexOf(text) !== -1){
         item.style.display = 'block';
@@ -73,9 +72,8 @@ class App {
     if(type === 'meal'){
       item = new Meal(name, +calories); // Putting a plus sign inf front of calories converts it to a number!! Wild
       this._tracker.addMeal(item);
-
     } else if (type === 'workout'){
-      item = new Workout(name, -calories); // Putting a plus sign inf front of calories converts it to a number!! Wild\    this._tracker.addMeal(meal);
+      item = new Workout(name, +calories); // Putting a plus sign inf front of calories converts it to a number!! Wild\    this._tracker.addMeal(meal);
       this._tracker.addWorkout(item);
     }
     document.getElementById(`${type}-name`).value = '';

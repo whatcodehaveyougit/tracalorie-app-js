@@ -33,10 +33,11 @@ class App {
   _removeItem(type, e){
     if(e.target.classList.contains('delete') | e.target.classList.contains('fa-xmark')){
       const id = e.target.closest('.card').getAttribute('data-id');
-      const item = e.target.closest(".card-body")
+      const item = e.target.closest(".card")
       if(type === 'meal'){
         this._tracker.removeMeal(id);
       } else if (type === 'workout'){
+        console.log('removing workout')
         this._tracker.removeWorkout(id);
       }
       item.remove(); // This takes item out of the dom
